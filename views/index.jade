@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+  div
+  form(action='/add',method='post')
+    div(data-role='fieldcontain')
+      fieldset(data-role='controlgroup')
+        input(id='word',type='text',value='',placeholder='Enter a word here...',name='word')  
+        input(type='submit',value='Submit',data-transition='fade', data-theme='c')
+  script(src='/javascripts/word_cloud.js')
