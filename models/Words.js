@@ -9,10 +9,16 @@ var wordsSchema = new Schema({
       type: Date, 
       default: Date.now
     },
-    word: {
-      type: String, 
-      validate: [required, 'Word Can Not Be Blank'],
-    }
+    word: {type: String, trim: true, required: true, unique: true}
 });
+
+wordsSchema.methods.list = function () {
+  console.log(this.word)
+}
+
+wordsSchema.methods.speak = function () {
+  console.log(this.word);
+}
+
  
 module.exports = mongoose.model('Word', wordsSchema);

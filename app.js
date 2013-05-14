@@ -33,12 +33,13 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/', routes.index);
-app.get('/users', user.list);
+var api = require('./api.js');
+app.get('/' ,routes.index);
+app.post('/words', api.add);
+app.post("api/add/:word", api.add)
+app.get('/api/show', api.show)
 
-app.post('/add', function(req,res){
-  console.log(req.body);
-})
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
