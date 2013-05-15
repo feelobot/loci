@@ -9,16 +9,11 @@ var wordsSchema = new Schema({
       type: Date, 
       default: Date.now
     },
-    word: {type: String, trim: true, required: true, unique: true}
+    word: {type: String, trim: true, required: true}
 });
 
 wordsSchema.methods.list = function () {
   console.log(this.word)
 }
-
-wordsSchema.methods.speak = function () {
-  console.log(this.word);
-}
-
  
 module.exports = mongoose.model('Word', wordsSchema);

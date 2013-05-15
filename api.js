@@ -9,12 +9,8 @@
 var Word = require('./models/words.js');
 var word_list = new Array()
 exports.add = function(req, res) {
-    var newWord = new Word({ word: req.body.word })
-    newWord.save(function (err, fluffy) {
-      if (err) // TODO handle the error
-      Word.speak();
-    });
-    console.log('')
+    var newWord = new Word({ word: req.body.word }).save()
+    console.log('newWord')
     res.redirect('/');
 }
 
