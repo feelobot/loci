@@ -9,7 +9,7 @@ var wordsSchema = new Schema({
       type: Date, 
       default: Date.now
     },
-    word: {type: String, trim: true, required: true}
+    word: {type: String, trim: true, required: true, unique: true}
 });
 
 wordsSchema.methods.list = function () {
