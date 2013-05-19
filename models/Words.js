@@ -9,11 +9,14 @@ var wordsSchema = new Schema({
       type: Date, 
       default: Date.now
     },
-    word: {type: String, trim: true, required: true}
+    word: { type: String, trim: true, required: true }
 });
 
-wordsSchema.methods.list = function () {
-  console.log(this.word)
-}
+/*
+wordsSchema.pre('save', function (next) {
+  var err = new Error('something went wrong');
+  next(err);
+});
+*/
  
 module.exports = mongoose.model('Word', wordsSchema);

@@ -11,7 +11,6 @@ mongoose.connect('mongodb://' + db.user + ':' + db.pass + '@' + db.host + ':' + 
 
 var express = require('express')
   , routes = require('./routes')
-  , user = require('./routes/user')
   , http = require('http')
   , path = require('path');
 

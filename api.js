@@ -8,8 +8,12 @@
  
 var Word = require('./models/words.js');
 var word_list = new Array()
-exports.add = function(req, res) {
-    var newWord = new Word({ word: req.body.word }).save()
+
+exports.add = function(req, res, err) {
+    var newWord = new Word({ word: req.body.word })
+    newWord.save(function(err){
+      console.log(err);
+    });
     console.log('newWord')
     res.redirect('/');
 }

@@ -14,11 +14,11 @@ exports.index = function(req, res) {
       word_list.push(val.word);
     }); 
     console.log(word_list)
-    //res.send(word_list);\
-    res.render('index', { 
-      title: 'Loci',
-      list: word_list
-    });
+    //res.send(word_list);
   })
+  res.render('index', { 
+    title: 'Loci',
+    list: word_list
+  });
   
 }

@@ -9,7 +9,8 @@
   "dependencies": {
     "express": "3.2.2",
     "jade": "*",
-    "mongoose": "*"
+    "mongoose": "*",
+    "jquery": "*"
   },
   "engines": {
     "node": "0.8.x"
