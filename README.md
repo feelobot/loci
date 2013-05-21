@@ -8,5 +8,9 @@ Enter a word and it saves to mogohq db. If the word exists the size property of 
 ## Live Demo:
 http://feelobot-loci.jit.su/
 
+### Programmed Endpoints:
+1. /show
+2. /clear
+
 
 ![Bilby Stampede](public/images/LOCI.png)
