@@ -8,7 +8,7 @@ exports.index = function(req, res) {
   List.find().select("text size -_id").exec(function(err, words) {
     console.log(words);
     res.render('index', { 
-      title: 'Loci',
+      title: 'LOCI',
       list: words
     });
   })
