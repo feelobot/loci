@@ -16,7 +16,7 @@ exports.add = function(req, res, err) {
 }
 
 exports.show = function(req, res) {
-  List.find(function(err, list) {
+  List.find().select("text size -_id").exec(function(err, list) {
     res.send(list);
   });
 };

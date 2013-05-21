@@ -36,7 +36,7 @@ var api = require('./api.js');
 app.get('/' ,routes.index);
 app.post('/words', api.add);
 app.get("/clear", api.wipe)
-app.get('/api/show', api.show)
+app.get('/show', api.show)
 
 
 
