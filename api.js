@@ -20,3 +20,10 @@ exports.show = function(req, res) {
     res.send(list);
   });
 };
+
+exports.wipe = function(req, res) {
+  List.remove({}, function(err) { 
+   console.log('collection removed') 
+   res.send("DB Cleared")
+});
+};

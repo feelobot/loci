@@ -35,7 +35,7 @@ if ('development' == app.get('env')) {
 var api = require('./api.js');
 app.get('/' ,routes.index);
 app.post('/words', api.add);
-app.post("api/add/:word", api.add)
+app.get("/clear", api.wipe)
 app.get('/api/show', api.show)
 
 
