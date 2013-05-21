@@ -31,7 +31,7 @@ block content
             .selectAll("text").data(words)
             .enter().append("text")
             .style("font-size", function(d) { return d.size * 5 + "px"; })
-            //.style("font-family", "Impact")
+            .style("font-family", "Champion-HTF-Featherweight")
             .style("fill", function(d, i) { return fill(i); })
             .attr("text-anchor", "middle")
             .attr("transform", function(d) {

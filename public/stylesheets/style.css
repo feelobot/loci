@@ -11,3 +11,7 @@ a {
   font-color: white;
   color: #00B7FF;
 }
+@font-face {
+  font-family: Champion-HTF-Featherweight;
+  src: url('../Champion-HTF-Featherweight.otf');
+}
